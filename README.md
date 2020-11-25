@@ -2,12 +2,26 @@
 By JugadorXEI, also made possible with the help of tons of community members. Like you!
 Before we start, check out [hyuu.cc](hyuu.cc)’s FAQ, which likely covers 80% of your questions (such as how to host netgames, and addon-related stuff). This covers what is not covered (mostly).
 
+### Table of contents
+* [I have a problem with a custom build! (And/or) A custom character! (And/or) A custom race track/level! (And/or) A Lua addon! (Or maybe it’s not a problem, but you wish to leave feedback)](#i-have-a-problem-with-a-custom-build-andor-a-custom-character-andor-a-custom-race-tracklevel-andor-a-lua-addon-or-maybe-its-not-a-problem-but-you-wish-to-leave-feedback)
+* [I am using the OpenGL renderer, but models are invisible! (Or) Certain models are visible, and some are completely invisible!](#i-am-using-the-opengl-renderer-but-models-are-invisible-or-certain-models-are-visible-and-some-are-completely-invisible)
+* [I am using the OpenGL renderer, but it crashes my game!](#i-am-using-the-opengl-renderer-but-it-crashes-my-game)
+* [How do I check if my ports are open?](#how-do-i-check-if-my-ports-are-open)
+* [How do I check if my server is being advertised on the Master Server?](#how-do-i-check-if-my-server-is-being-advertised-on-the-master-server)
+* [I can’t connect to the master server!](#i-cant-connect-to-the-master-server)
+* [How do I backup my save file?](#how-do-i-backup-my-save-file)
+* [Discord Rich Presence does not work!](#discord-rich-presence-does-not-work)
+* [How do I open SRB2Kart in OGL/Software mode through Steam?](#how-do-i-open-srb2kart-in-oglsoftware-mode-through-steam)
+* [My screen gets cut off when using a big resolution!](#my-screen-gets-cut-off-when-using-a-big-resolution)
+* [SmartScreen/My anti-virus says the SRB2Kart installer/patcher is not trusted and I can’t open it!](#smartscreenmy-anti-virus-says-the-srb2kart-installerpatcher-is-not-trusted-and-i-cant-open-it)
+* [Is there a list of commands, variables and start-up parameters for Kart?](#is-there-a-list-of-commands-variables-and-start-up-parameters-for-kart)
+* [My game runs out of memory often!](#my-game-runs-out-of-memory-often)
 
 ## I have a problem with a custom build! (And/or) A custom character! (And/or) A custom race track/level! (And/or) A Lua addon! (Or maybe it’s not a problem, but you wish to leave feedback)
-* Custom build support goes to #hardcode in the Kart Krew Discord, or to its respective thread on the Message Board.
-* Custom characters having issues go to #custom-racers in the KK Discord, or to its respective thread on the Message Board. If you need help doing sprites, #spriting-help in the KK Discord is there to help, if possible.
-* Custom levels having problems go to #custom-courses in the KK Discord, or to its respective thread on the Message Board. If you’re having trouble doing something in Zone Builder yourself, you can get support on the #course-help channel in the KK Discord.
-* And finally, custom LUA addons having problems go to #graphics-lua-misc in the KK Discord, or to its respective thread on the Message Board.
+* Custom build support goes to #hardcode in the Kart Krew Discord, or to its respective thread on the [Message Board](https://mb.srb2.org/forumdisplay.php?f=128).
+* Custom characters having issues go to #custom-racers in the KK Discord, or to its respective thread on the [Message Board](https://mb.srb2.org/forumdisplay.php?f=111). If you need help doing sprites, #spriting-help in the KK Discord is there to help, if possible.
+* Custom levels having problems go to #custom-courses in the KK Discord, or to its respective thread on the [Message Board](https://mb.srb2.org/forumdisplay.php?f=112). If you’re having trouble doing something in Zone Builder yourself, you can get support on the #course-help channel in the KK Discord.
+* And finally, custom LUA addons having problems go to #graphics-lua-misc in the KK Discord, or to its respective thread on the [Message Board](https://mb.srb2.org/forumdisplay.php?f=113).
 
 Remember that, when you leave feedback, or you are reporting a problem, be as constructive as possible. If you’re found a bug in a Lua addon, reproduction steps (AKA, how to cause a problem consistently) help a ton!
 
@@ -16,9 +30,9 @@ Keep in mind that people who provide addons, do so for free, and out of passion 
 And finally, don’t inquire about these problems on the #tech-support channel in the Kart Krew Discord, which is for base game bugs and problems!
 
 ## I am using the OpenGL renderer, but models are invisible! (Or) Certain models are visible, and some are completely invisible!
-Make sure there is a “mdls” folder and a “mdls.dat” file in your SRB2Kart folder. If there isn’t, that might mean something went wrong in your SRB2Kart installation which might have made it exclude the model files.
+Make sure there is a `mdls` folder and a `mdls.dat` file in your SRB2Kart folder. If there isn’t, that might mean something went wrong in your SRB2Kart installation which might have made it exclude the model files.
 
-If certain models are invisible/not being rendered, what this means is that the model is defined in the mdls.dat file, but the model does not actually exist, or there could be a parsing error in the file. To fix it, open the mdls.dat file with a text editor, and make sure each line follows this same pattern:
+If certain models are invisible/not being rendered, what this means is that the model is defined in the `mdls.dat` file, but the model does not actually exist, or there could be a parsing error in the file. To fix it, open the `mdls.dat` file with a text editor, and make sure each line follows this same pattern:
 `FILE PATH/FILE.md3 3.0 0.0`
 
 Where the first parameter is a name, the second is a (relative) path to a .md2 or .md3 file, and the third and fourth parameters are numbers with a decimal (usually referring to scales). The most common syntax errors are usually lack of spaces, or a dot between the last two numbers.
@@ -42,6 +56,8 @@ Check the [Master Server link](https://ms.kartkrew.org/ms/api/games/SRB2Kart/7/s
 The master server is either down, or you might not be using the correct master server link.
 In the former case, just wait it out! In the latter case, check if the master server is “https://ms.kartkrew.org/ms/api”, either by opening the developer console (with the tilde button - the one above Tab) and writing “masterserver” and the address, or by going to Options > Server Options > Advanced Options > Server Browser Address.
 
+![ms](imeges/ms.png)
+
 ## How do I backup my save file?
 In the game folder,
 * “kartdata.dat” contains your save file data, such as your Record Attack medals.
@@ -58,6 +74,7 @@ From this point onwards, Discord is usually smart enough to know the game you’
   * Make sure “Display currently running game as a status message” is turned on.
   * If your game is not automatically detected by Discord, press the blue “Add it!” button, and select “SRB2Kart”.
 
+![discord](imeges/discord.png)
 
 You may need to restart Discord through the CTRL+R shortcut or by simply reopening it.
 
@@ -69,19 +86,29 @@ In 1.3, the game remembers your renderer choice as long as you boot it using the
 However, if you want your Steam shortcut to force a particular renderer choice, you must use the **-software** and/or **-opengl** startup parameters. In order to do this:
 * Add the game on Steam - go to the library tab, and on the lower left corner of the screen, click “Add a game” then “Add a non-Steam game”.
 
+![steam add game](imeges/steam1.png)
+
 * On the dialog that appears, click “Browse”, and a new dialog will appear. Go to the folder where the game is, click on its executable, then press Open.
 
+![steam browse](imeges/steam2.png) ![steam open](imeges/steam3.png)
+
 * The game will now appear on the former dialog and now checkmarked. Click on “Add Selected Programs” to proceed.
+
+![steam add program](imeges/steam4.png)
 
 * The game should now appear in your library. Right-click the game, then press Properties. On the Property window that appears, press “Set Launch Options”.
 
 * In the Launch Options dialog, you should be able to set the startup parameters you need. Put `-opengl` if you wish the game to start with the OpenGL renderer, or `-software` to use the Software renderer. Click “Ok”, and now it should work the way you want it to!
+
+![steam propeties](imeges/steam5.png) ![steam launch options](imeges/steam6.png)
 
 ## My screen gets cut off when using a big resolution!
 In Windows 10,
 * Right Click the srb2kart.exe executable, then click Properties.
 * The Properties dialog should appear - go to the Compatibility tab and then press the “Change high DPI settings” button.
 * A new window will appear that will say “Choose the high DPI settings for this program”. In the High DPI scaling override section, check the “Override high DPI scaling behaviour” selection, and then on the dropdown menu, let the “Application” handle it. Press Ok on this window, then Ok/Apply on the properties window. The black bars should disappear.
+
+![dpi change](imeges/dpi.png)
 
 ## SmartScreen/My anti-virus says the SRB2Kart installer/patcher is not trusted and I can’t open it!
 If SmartScreen prevents you from running the installer or patcher, on its dialog window, click “More info”. The “Run anyway” button will appear afterwards, from which you can click to proceed with the install.
@@ -90,6 +117,7 @@ If your antivirus is blocking the installer, let your antivirus make an exceptio
 
 Do not worry about the installer being unsafe - as long as you download it from the [Message Board](https://mb.srb2.org/showthread.php?t=43708) or [GitHub releases](https://github.com/STJr/Kart-Public/releases/), you should be getting a safe download.
 
+![win prot info](imeges/virus1.png) ![win prot run away](imeges/virus2.png)
 
 ## Is there a list of commands, variables and start-up parameters for Kart?
 Console commands and variables can be found [here](https://wiki.srb2.org/wiki/Console/Commands) and [here](https://wiki.srb2.org/wiki/Console/Variables). Kart-specific variables and commands can be found [here](https://wiki.srb2.org/wiki/User:ThatAwesomeGuy173/SRB2Kart/Variables). Start-up parameters can be found [here](https://wiki.srb2.org/wiki/Command_line_parameters).
